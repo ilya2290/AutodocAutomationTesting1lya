@@ -54,7 +54,7 @@ public class AutodocLogin {
     public static void pause(){
         $(By.cssSelector("#slick-slide00 > span > img")).waitWhile(Condition.appear,5000);
     }
-
+//
 }
 
 
