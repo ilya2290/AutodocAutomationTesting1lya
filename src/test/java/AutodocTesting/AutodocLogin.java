@@ -23,7 +23,7 @@ public class AutodocLogin {
     //    $(By.cssSelector("#login_top > div.button > a")).click(); //submit
 
     }
-
+// Нужно понять почему не находит элемент
     public static void openLoginPopupMainPage(){
         $(By.cssSelector("#wrap_content > header > div > div.header__top > div.header__profile.logined.sigin_btn > a")).click();
         String expectedTittlePopup = "Anmelden";
