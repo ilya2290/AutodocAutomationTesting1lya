@@ -11,13 +11,14 @@ public class Test_PopupLoginHomePage {
        open("https://www.autodoc.de/");
        Selenide.clearBrowserCookies();
         CookieClose.cookieClose();
-        AutodocLogin.LoginPopup();
-        AutodocLogin.setEmailAuthorisationMainPopup();
-        AutodocLogin.setPasswordAuthorisationMainPopup();
-        AutodocLogin.submitButtonAuthorisation();
+        AutodocLogin testLogin = new AutodocLogin();
 
-    }
+        testLogin.openLoginPopup();
+        testLogin.setEmail();
+        testLogin.setPassword();
+        testLogin.submitButton();
 }
+    }
 
 
 
