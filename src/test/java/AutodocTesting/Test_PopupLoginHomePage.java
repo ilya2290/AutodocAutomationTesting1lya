@@ -8,19 +8,14 @@ public class Test_PopupLoginHomePage {
 
     @Test
     public void testAuthorise() {
-        //Selenide.clearBrowserCookies();
-        open("https://www.autodoc.de/");
-
-        AutodocLogin.pause(); //тут нужно увеличивать задержку если падает
+       open("https://www.autodoc.de/");
+       Selenide.clearBrowserCookies();
         CookieClose.cookieClose();
-        AutodocLogin.openLoginPopupMainPage();
+        AutodocLogin.LoginPopup();
         AutodocLogin.setEmailAuthorisationMainPopup();
         AutodocLogin.setPasswordAuthorisationMainPopup();
         AutodocLogin.submitButtonAuthorisation();
 
-
-
-        PopupDiscountBanner.closePopupDiscountBanner();
     }
 }
 
