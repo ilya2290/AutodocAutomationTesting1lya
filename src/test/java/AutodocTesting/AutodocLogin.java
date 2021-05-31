@@ -39,6 +39,28 @@ public class AutodocLogin {
         $(By.cssSelector("#slick-slide00 > span > img")).waitWhile(Condition.appear, 10000);
     }
 
+    public void showPassword(){
+        $(By.cssSelector("#pass-button")).doubleClick();
+        Configuration.timeout =3000;
+    }
+
+    public void rememberSession(){
+        $(By.cssSelector("#login_top > div.check.remember > label")).click();
+    }
+
+    public void forgetPassword(){
+        String recoveryEmail = "vasyav371@gmail.com";
+        String successTittle ="Vielen Dank!";
+        $(By.cssSelector("#login_top > a")).click();
+        $(By.cssSelector("body > div.autodoc_login_popup.popup_login.pass.recovery")).waitUntil(Condition.appear,2000);
+        $(By.cssSelector("#recovery-email")).setValue(recoveryEmail);
+        $(By.cssSelector("body > div.autodoc_login_popup.popup_login.pass.recovery > div.rs_pass.pass-recovery > a.senden.submit")).click();
+        $(By.cssSelector("#popup_update")).waitUntil(Condition.appear,3000);
+        String actualSuccessTittle = $(By.cssSelector("#popup_update > div.popup_inner > div.popup_top > h3")).getText();
+        assertEquals(successTittle,actualSuccessTittle);
+        $(By.cssSelector("#popup_update > div.popup_inner > div.popup_content > div.buttons > div > a")).click();
+    }
+
 }
 
 
