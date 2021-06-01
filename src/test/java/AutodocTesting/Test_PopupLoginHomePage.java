@@ -4,7 +4,6 @@ import com.codeborne.selenide.Selenide;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import static com.codeborne.selenide.Selenide.open;
 
 public class Test_PopupLoginHomePage {

@@ -3,7 +3,6 @@ package AutodocTesting;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.By;
-
 import static com.codeborne.selenide.Selenide.*;
 import static org.junit.Assert.assertEquals;
 
