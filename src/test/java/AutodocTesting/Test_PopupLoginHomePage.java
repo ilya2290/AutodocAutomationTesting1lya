@@ -11,13 +11,13 @@ public class Test_PopupLoginHomePage {
     @Before
     public void siteOpen(){
         open("https://www.autodoc.de/");
+        Selenide.clearBrowserCookies();
+        CookieClose cookie = new CookieClose();
+        cookie.cookieClose();
     }
 
     @Test
     public void testAuthorise() {
-        Selenide.clearBrowserCookies();
-        CookieClose cookie = new CookieClose();
-        cookie.cookieClose();
         AutodocLogin testLogin = new AutodocLogin();
         testLogin.openLoginPopup();
         testLogin.setEmail();
@@ -29,10 +29,7 @@ public class Test_PopupLoginHomePage {
 
     @Test // Может быть нужно как класс или вложенный класс
     public void forgetPasswordTest() {
-        Selenide.clearBrowserCookies();
         AutodocLogin testLogin = new AutodocLogin();
-        CookieClose cookie = new CookieClose();
-        cookie.cookieClose();
         testLogin.openLoginPopup();
         testLogin.forgetPassword();
     }
