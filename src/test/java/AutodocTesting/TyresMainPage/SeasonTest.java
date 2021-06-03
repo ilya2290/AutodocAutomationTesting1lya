@@ -9,24 +9,20 @@ import static com.codeborne.selenide.Selenide.open;
 public class SeasonTest {
 
     @Before
-    public void siteOpen(){
+    public void siteOpen() {
         open("https://www.autodoc.de/reifen");
+        CookieClose cookie = new CookieClose();
+        cookie.cookieClose();
     }
 
     @After
-    public void testLogs(){
+    public void testLogs() {
         System.out.println("Test passed");
     }
 
     @Test
-    public void selectorSeasonTest() throws InterruptedException {
-        CookieClose cookie = new CookieClose();
+    public void selectorSeasonTest() {
         TyresSelector selector = new TyresSelector();
-        cookie.cookieClose();
-        //selector.currentSeason();
-        //selector.changeSeason();
-        //selector.getSelectorFormSize();
         selector.getSelectorsFormValues();
-        Thread.sleep(4000);
     }
 }
