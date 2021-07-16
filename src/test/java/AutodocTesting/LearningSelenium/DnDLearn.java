@@ -1,4 +1,4 @@
-package Learning;
+package AutodocTesting.LearningSelenium;
 
 import com.codeborne.selenide.SelenideElement;
 import org.junit.Test;

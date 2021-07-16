@@ -1,12 +1,13 @@
-package AutodocTesting.TyresMainPage;
+package TyresTests;
 
 import AutodocTesting.CookieClose;
+import AutodocTesting.TyresMainPage.TyresSelector;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SeasonTest {
+public class Test_Season {
 
     @Before
     public void siteOpen() {
@@ -23,6 +24,9 @@ public class SeasonTest {
     @Test
     public void selectorSeasonTest() {
         TyresSelector selector = new TyresSelector();
-        selector.getSelectorsFormValues();
+//        selector.getSelectorsFormValues();
+//        selector.getCurrentBreiteValues();
+ //           selector.getBreiteSizes();
+
     }
 }

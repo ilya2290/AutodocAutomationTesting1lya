@@ -1,5 +1,7 @@
-package AutodocTesting;
+package TyresTests;
 
+import AutodocTesting.AutodocLogin;
+import AutodocTesting.CookieClose;
 import com.codeborne.selenide.Selenide;
 import org.junit.After;
 import org.junit.Before;
@@ -25,7 +27,6 @@ public class Test_PopupLoginHomePage {
         testLogin.showPassword();
         testLogin.submitButton();
     }
-
 
     @Test // Может быть нужно как класс или вложенный класс
     public void forgetPasswordTest() {
